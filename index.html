@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transição de Cor de Fundo</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease; /* Transição suave */
+  }
+  .container {
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button onclick="changeBackgroundColor()">Mudar Cor de Fundo</button>
+</div>
+
+<script>
+  function changeBackgroundColor() {
+    var body = document.querySelector('body');
+    // Gerar cores RGB aleatórias
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    body.style.backgroundColor = randomColor;
+  }
+</script>
+
+</body>
+</html>
